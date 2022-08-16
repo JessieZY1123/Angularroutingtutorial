@@ -1,0 +1,21 @@
+<form #addAlbum="ngForm" (submit)="saveAlbum(addAlbum)">
+    <div class="mb-3">
+        <label for="txtTitle">Titile</label>
+        <input  type="text" [(ngModel)]="album.title" name="title" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label for ="ddlGenre">Select Genre</label>
+        <select name="genre" [(ngModel)]="album.genre" class="form-control" id="ddlGenre" >
+            <option value="Select">Select</option>
+            <option value="SciFi">SciFi</option>
+            <option value="Drama">Drama</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="txtdecription">Description</label>
+        <textarea  id="txtdecription" name="description" class="form-control" [(ngModel)]="album.description"></textarea>
+    </div>  
+    <input type="submit" [disabled]="!addAlbum.valid" value="Save Album" class="btn btn-primary"/>
+    <input type="button" value="Reset" class="btn btn-info" (click)="resetForm(addAlbum)"/>
+    <input type="button" value="Load Data" class="btn btn-success" (click)="loadData(addAlbum)"/>
+</form>

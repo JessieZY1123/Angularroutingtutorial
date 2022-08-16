@@ -1,0 +1,15 @@
+<h1>Albums List</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let a of albumCollection">
+            <td>{{a.id}}</td>
+            <td>{{a.title}}</td>
+        </tr>
+    </tbody>
+</table>

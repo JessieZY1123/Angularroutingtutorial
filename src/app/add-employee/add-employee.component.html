@@ -1,0 +1,13 @@
+<!--two properties, but [value] is binding the property.-->
+<!--[value] = name. name is the property-->
+<form class="mt-3" >
+    <input type="text" placeholder="Enter Name" id="textName" class="form-control" [value]="emp.name"/>
+    <input type="text" placeholder="Enter Age" class="form-control "[value]="emp.age"/>
+    <input type="text" placeholder="Enter saraly" class="form-control" [value]="emp.salary"/>
+    <input type="text" placeholder="Enter department" class="form-control" [value]="emp.department"/>
+    <input type="button" value="Save" class="btn btn-primary mt-3"/>
+</form>
+<!--FormsModule must be added/imported in the current module(app.module.ts)-->
+<input [(ngModel)]="message" />
+<span>{{message}}</span>
+<!--two-way binding sent the data simultaneously between template and component.-->

@@ -1,0 +1,34 @@
+<div class="container-fluid mt-3">
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Salary</td>
+            <td>Options</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of employees">
+            <td>
+                {{c.id}}
+            </td>
+            <td>
+                {{c.name | uppercase}}  <!--pipe-->
+            </td>
+            <td>
+                {{c.age}}
+            </td>
+            <td>
+                {{c.salary | currency: "CNY"}}
+            </td>
+            <td>
+                <a class="btn btn-success" href="emp/detail/{{c.id}}/{{c.name}}">Edit</a>
+                <a class="btn btn-warning" [routerLink]="['/emp/detail',c.id,c.name]">Detail</a>
+                <a class="btn btn-info"[routerLink]="['/emp/edit',c.id]">Edit</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

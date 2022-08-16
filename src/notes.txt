@@ -1,0 +1,19 @@
+<form>
+<input type = "text" />
+</form>
+
+Template driven form  -- control in handled in html page
+reactive form  -- generate the logic in component file and then link to html control
+
+Template driven form: two way binding with [(ngModel)] and import FormsModule in the current module
+create a template reference variable with ngForm. use # to define the name.
+
+
+reactive Forms
+    dynamic forms: you need to create forms element dynamically
+
+ReactiveFormsModule:
+
+    FormGruop:
+        FormControl:
+        Form (tag)-> Controls: Textbox, imput, select, button
